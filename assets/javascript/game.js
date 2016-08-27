@@ -36,6 +36,23 @@ var lossCount = 0;
 
 //Funcions
 //--------------------------------------------------------
+var startGame = function () {
+	// Reset game
+	var currentScore = 0;
+}
+
 
 //Main Process
-//-------------------------------------------------------
+//--------------------------------------------------------
+$("#blue").click(function() {
+	alert("blue")
+});
+$("#red").click(function() {
+	alert("red")
+});
+$("#green").click(function() {
+	alert("green")
+});
+$("#yellow").click(function() {
+	alert("yellow")
+});
