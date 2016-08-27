@@ -57,7 +57,7 @@ var startGame = function () {
 
 	console.log("-----------")
 
-	console.log("target score" + targetScore)
+	console.log("Target Score: " + targetScore)
 	
 	console.log("Blue " + crystals.red.value + " | Red: " + crystals.blue.value + " | Blue: " + crystals.green.value + " | Green: " + crystals.yellow.value + " | Yellow: ")
 
