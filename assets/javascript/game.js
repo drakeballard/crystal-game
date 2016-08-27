@@ -37,8 +37,8 @@ var lossCount = 0;
 //Funcions
 //--------------------------------------------------------
 //Generalize the random number operator
-var getRandom = functions(min, max) {
-	return Math.floor(Math.random() * max - min + 1) + min;
+var getRandom = function(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 var startGame = function () {
@@ -46,7 +46,22 @@ var startGame = function () {
 	var currentScore = 0;
 
 	//set new  taregt  Score
-	targetScore=getRandom (25, 120;)
+	targetScore=getRandom (19, 120;)
+
+
+	//set different values 1-12 for a crystal. this will be rando m association
+	crystal.red.value = getRandom(1,12);
+	crystal.blue.value = getRandom(1,12);
+	crystal.green.value = getRandom(1,12);
+	crystal.yellow.value = getRandom(1,12);
+
+	console.log("-----------")
+
+	console.log("target score" + targetScore)
+	
+	console.log("Blue " + crystal.red.value + " | Red: " + crystal.blue.value + " | Blue: " + crystal.green.value + " | Green: " + crystal.yellow.value + " | Yellow: ")
+
+	console.log("-----------")
 }
 
 
@@ -64,3 +79,5 @@ $("#green").click(function() {
 $("#yellow").click(function() {
 	alert("yellow")
 });
+
+startGame();
