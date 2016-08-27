@@ -48,12 +48,16 @@ var startGame = function () {
 	//set new  taregt  Score
 	targetScore = getRandom (19, 120);
 
-
+ 
 	//set different values 1-12 for a crystal. this will be rando m association
 	crystals.red.value = getRandom(1, 12);
 	crystals.blue.value = getRandom(1, 12);
 	crystals.green.value = getRandom(1, 12);
 	crystals.yellow.value = getRandom(1, 12);
+
+
+	$("#yourScore").html(currentScore);
+	$("#targetScore").html(targetScore);
 
 	console.log("-----------")
 
@@ -64,20 +68,38 @@ var startGame = function () {
 	console.log("-----------")
 }
 
+var addValues = function(crystals) {
+
+	currentScore = currentScore + crystals.value;
+
+	$("#yourScore").html(currentScore);
+
+	checkWin();
+
+	console.log("Your Score: " + currentScore);
+}
+
+var checkWin = function() {
+
+}
 
 //Main Process
 //--------------------------------------------------------
 startGame();
 
-$("#blue").click(function() {
-	alert("blue")
-});
 $("#red").click(function() {
-	alert("red")
+	addValues(crystals.red);
+	//alert("red")
+});
+$("#blue").click(function() {
+	addValues(crystals.blue);
+	//alert("blue")
 });
 $("#green").click(function() {
-	alert("green")
+	addValues(crystals.green);
+	//alert("green")
 });
 $("#yellow").click(function() {
-	alert("yellow")
+	addValues(crystals.yellow);
+	//alert("yellow")
 });
