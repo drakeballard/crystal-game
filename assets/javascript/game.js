@@ -36,9 +36,17 @@ var lossCount = 0;
 
 //Funcions
 //--------------------------------------------------------
+//Generalize the random number operator
+var getRandom = functions(min, max) {
+	return Math.floor(Math.random() * max - min + 1) + min;
+}
+
 var startGame = function () {
 	// Reset game
 	var currentScore = 0;
+
+	//set new  taregt  Score
+	targetScore=getRandom (25, 120;)
 }
 
 
