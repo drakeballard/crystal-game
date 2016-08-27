@@ -3,14 +3,14 @@
 
 //Crystals
 var crystals = {
-	blue:
-	{
-		name: "Blue",
-		value: 0 
-	},	
 	red:
 	{
 		name: "Red",
+		value: 0 
+	},	
+	blue:
+	{
+		name: "Blue",
 		value: 0 
 	},
 	green:
@@ -46,20 +46,20 @@ var startGame = function () {
 	var currentScore = 0;
 
 	//set new  taregt  Score
-	targetScore=getRandom (19, 120;)
+	targetScore = getRandom (19, 120);
 
 
 	//set different values 1-12 for a crystal. this will be rando m association
-	crystal.red.value = getRandom(1,12);
-	crystal.blue.value = getRandom(1,12);
-	crystal.green.value = getRandom(1,12);
-	crystal.yellow.value = getRandom(1,12);
+	crystals.red.value = getRandom(1, 12);
+	crystals.blue.value = getRandom(1, 12);
+	crystals.green.value = getRandom(1, 12);
+	crystals.yellow.value = getRandom(1, 12);
 
 	console.log("-----------")
 
 	console.log("target score" + targetScore)
 	
-	console.log("Blue " + crystal.red.value + " | Red: " + crystal.blue.value + " | Blue: " + crystal.green.value + " | Green: " + crystal.yellow.value + " | Yellow: ")
+	console.log("Blue " + crystals.red.value + " | Red: " + crystals.blue.value + " | Blue: " + crystals.green.value + " | Green: " + crystals.yellow.value + " | Yellow: ")
 
 	console.log("-----------")
 }
@@ -67,6 +67,8 @@ var startGame = function () {
 
 //Main Process
 //--------------------------------------------------------
+startGame();
+
 $("#blue").click(function() {
 	alert("blue")
 });
@@ -79,5 +81,3 @@ $("#green").click(function() {
 $("#yellow").click(function() {
 	alert("yellow")
 });
-
-startGame();
