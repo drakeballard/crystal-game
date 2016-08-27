@@ -43,7 +43,7 @@ var getRandom = function(min, max) {
 
 var startGame = function () {
 	// Reset game
-	var currentScore = 0;
+	currentScore = 0;
 
 	//set new  taregt  Score
 	targetScore = getRandom (19, 120);
@@ -63,7 +63,7 @@ var startGame = function () {
 
 	console.log("Target Score: " + targetScore)
 	
-	console.log("Blue " + crystals.red.value + " | Red: " + crystals.blue.value + " | Blue: " + crystals.green.value + " | Green: " + crystals.yellow.value + " | Yellow: ")
+	console.log("Red: " + crystals.red.value + " | Blue: " + crystals.blue.value + " | Green: " + crystals.green.value + " | Yellow: " + crystals.yellow.value)
 
 	console.log("-----------")
 }
@@ -81,6 +81,26 @@ var addValues = function(crystals) {
 
 var checkWin = function() {
 
+	if(currentScore > targetScore) {
+		alert("You lost");
+		console.log("You lost");
+
+		lossCount++;
+
+		$("#lossCount").html(lossCount);
+
+		startGame();
+	} 
+
+	else if (currentScore == targetScore) {
+		alert("Congrats, you WON");
+		console.log("You Won");
+
+		winCount++;
+		$("#winCount").html(winCount);
+
+		startGame();
+	}
 }
 
 //Main Process
